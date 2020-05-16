@@ -8,7 +8,7 @@ echo '<!DOCTYPE html>'
 echo '<html>'
         echo '<head>'
                 echo '<title>CRM Server Statistics</title>'
-                echo '<link rel="icon" href="logo.jpg">'
+                echo '<link rel="icon" href="logo.png">'
                 echo "<link href="bootstrap/css/bootstrap.css" rel="stylesheet">"
                 echo '<style>'
                         echo '.row{'
@@ -28,7 +28,7 @@ echo '<html>'
 footer(){
                echo '<div class="row" style="text-align:center;">'
                         echo "<a href="index.html">REFRESH</a><br /><br />"
-                        echo '<p>Applications Support & Monitoring & Unix Team</p>'
+                        echo '<p>opentechy.com</p>'
                 echo '</div>'
                 echo "<!--<script src="bootstrap/js/bootstrap.js"></script>-->"
         echo '</body>'
@@ -57,7 +57,7 @@ body(){
                                                 echo '<th>CPU USAGE (%)</th>'
                                                 echo '<th>MEMORY USAGE (%)</th>'
                                        echo ' </tr>'
-		for server in $(more /root/bin/server-list.txt)
+		for server in $(more /root/scripts/server-list.txt)
 			do
 		os_id=$(ssh -q $server rpm -qa \*-release | grep -Ei "oracle|redhat|centos" |cut -d"-" -f1)
 		el_version=$(ssh -q $server rpm -qa \*-release | grep -Ei "oracle|redhat|centos" | cut -d"-" -f3 | cut -c1)
@@ -93,16 +93,4 @@ body(){
 header
 body
 footer
-
-#Backup to history
-RETVAL=$?
-if [ $RETVAL -eq 0 ]; then
-cp /opt/www/public_html/crm/index.html /root/bin/history/$date.html
-fi
-
-#convert html to csv
-RETVAL=$?
-if [ $RETVAL -eq 0 ]; then
-/usr/local/bin/html2csv /root/bin/history/$date2.html > /root/bin/history/$date2.csv
-fi
 
