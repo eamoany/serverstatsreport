@@ -7,7 +7,7 @@ header(){
 echo '<!DOCTYPE html>'
 echo '<html>'
         echo '<head>'
-                echo '<title>CRM Server Statistics</title>'
+                echo '<title>Server Stats Report</title>'
                 echo '<link rel="icon" href="logo.png">'
                 echo "<link href="bootstrap/css/bootstrap.css" rel="stylesheet">"
                 echo '<style>'
