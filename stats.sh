@@ -40,7 +40,7 @@ body(){
                 echo '<br />'
                 echo '<div class="row">'
                         echo '<img src="logo.jpg" alt="Vodafone Logo" class="center" style="width:220px; height:180px;">'
-                        echo '<h2 style="text-align:center;">SERVERS RESOURCE USAGE STATISTICS</h2>'
+                        echo '<h2 style="text-align:center;">SERVERS STATS REPORT</h2>'
 			echo '<div class="row" style="text-align:center;">'
                         echo "<p>$date2</p>"
                 	echo '</div>'
