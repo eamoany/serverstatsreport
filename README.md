@@ -31,7 +31,7 @@ copy the contents of the html folder to the folder /var/www/html/serverstatsrepo
 1. You need to edit server-list and enter your IPs
 2. You can also edit the stats.sh to modify the html templates.You can add your logo as well
 
-
-
+Finally you need to create a cron job for time you want the script to be runing.In my lab, i have set to 11:55pm GMT
+55 11 * * * /bin/sh /root/scripts/serverstatsreport.sh 2>&1
 
 
