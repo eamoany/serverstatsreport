@@ -6,21 +6,21 @@ Its works on centos, redhat and cloudinux systems
 1. A Webserver - ( I used Apache in this example)
 2. passwordless ssh login between webserver and remote servers
 
-installation of webserver:
-yum install httpd httpd-tools -y
+installation of webserver:<br />
+yum install httpd httpd-tools -y<br />
 
-setting up of passwordless ssh login between webserver and remote servers:
-On Webserver:
-ssh-keygen -t rsa
+setting up of passwordless ssh login between webserver and remote servers:<br />
+On Webserver:<br />
+ssh-keygen -t rsa<br />
 
-After the above completes, then you need to copy public key to each server you want to report resources;
-For example:
-ssh-copy-id root@10.10.0.10
+After the above completes, then you need to copy public key to each server you want to report resources;<br />
+For example:<br />
+ssh-copy-id root@10.10.0.10<br />
 
-#Configuration
-clone the repository to /root on your webserver:
-cd /root
-https://github.com/eamoany/serverstatsreport.git
+#Configuration<br />
+clone the repository to /root on your webserver:<br />
+cd /root<br />
+https://github.com/eamoany/serverstatsreport.git<br />
 
 #create a folder on webserver DocRoot:
 If its Apache and its the default DocRoot,then create folder as below
