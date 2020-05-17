@@ -3,8 +3,8 @@ This scripts conenct to remote servers to report on their CPU,DISK and RAM usage
 Its works on centos, redhat and cloudinux systems
 
 #Requirements:
-1. A Webserver - ( I used Apache in this example)
-2. passwordless ssh login between webserver and remote servers
+1. A Webserver - ( I used Apache in this example)<br />
+2. passwordless ssh login between webserver and remote servers<br />
 
 installation of webserver:<br />
 yum install httpd httpd-tools -y<br />
@@ -22,16 +22,16 @@ clone the repository to /root on your webserver:<br />
 cd /root<br />
 https://github.com/eamoany/serverstatsreport.git<br />
 
-#create a folder on webserver DocRoot:
-If its Apache and its the default DocRoot,then create folder as below
-mkdir -p /var/www/html/serverstatsreport
-copy the contents of the html folder to the folder /var/www/html/serverstatsreport
+#create a folder on webserver DocRoot:<br />
+If its Apache and its the default DocRoot,then create folder as below<br />
+mkdir -p /var/www/html/serverstatsreport<br />
+copy the contents of the html folder to the folder /var/www/html/serverstatsreport<br />
 
-#modifications and customisation
-1. You need to edit server-list and enter your IPs
-2. You can also edit the stats.sh to modify the html templates.You can add your logo as well
+#modifications and customisation<br />
+1. You need to edit server-list and enter your IPs<br />
+2. You can also edit the stats.sh to modify the html templates.You can add your logo as well<br />
 
-Finally you need to create a cron job for time you want the script to be runing.In my lab, i have set to 11:55pm GMT
-55 11 * * * /bin/sh /root/scripts/serverstatsreport.sh 2>&1
+Finally you need to create a cron job for time you want the script to be runing.In my lab, i have set to 11:55pm GMT<br />
+55 11 * * * /bin/sh /root/scripts/serverstatsreport.sh 2>&1<br />
 
 
